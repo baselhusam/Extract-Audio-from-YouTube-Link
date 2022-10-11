@@ -1,15 +1,17 @@
 import streamlit as st
 from pytube import YouTube
 import time
+import http
 
 
-st.markdown("# <div align=center> Extract Audio from YouTube Video </div> <br> ", unsafe_allow_html=True)
+st.markdown("# <div align=center> Extract Audio from YouTube Video.</div> <br> ", unsafe_allow_html=True)
 st.markdown("##### <div align=center> Paste the link of the youtube video below to download the audio <hr></div>", unsafe_allow_html=True)
 
 
 st.markdown(" ### <div align=center> The URL link </div> ", unsafe_allow_html=True)
-link = st.text_input('', placeholder = "Enter the Video Link Here!")
+url = st.text_input('', placeholder = "Enter the Video Link Here!")
 st.markdown("<div></div>", unsafe_allow_html=True)
+link = http.client.HTTPConnection(url)
 
 
 
@@ -23,6 +25,7 @@ if link:
         my_bar.progress(percent_complete + 1)
         
     my_bar.empty()
+    
 
     yt = YouTube(link)
     audio = yt.streams.filter(only_audio = True).get_audio_only()
