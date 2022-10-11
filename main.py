@@ -4,7 +4,7 @@ import time
 import http
 
 
-st.markdown("# <div align=center> Extract Audio from YouTube Video.</div> <br> ", unsafe_allow_html=True)
+st.markdown("# <div align=center> Extract Audio from YouTube Video</div> <br> ", unsafe_allow_html=True)
 st.markdown("##### <div align=center> Paste the link of the youtube video below to download the audio <hr></div>", unsafe_allow_html=True)
 
 
@@ -27,7 +27,7 @@ if link:
     my_bar.empty()
     
 
-    yt = YouTube(link)
+    yt = YouTube(url)
     audio = yt.streams.filter(only_audio = True).get_audio_only()
     stream = yt.streams.get_by_itag(140)
     
