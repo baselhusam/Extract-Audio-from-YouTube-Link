@@ -1,7 +1,7 @@
 ## Instructions:
 <hr>
 
-##### using the `git bash` powershell or `Anaconda Prompt` write the following commands:
+##### using the `git bash` powershell and `Anaconda Prompt` write the following commands:
 ```bash
 git clone https://github.com/baselhusam/Extract-Audio-from-YouTube-Link.git
 cd Extract-Audio-from-YouTube-Link/
